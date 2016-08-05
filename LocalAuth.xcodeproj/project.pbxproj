@@ -10,6 +10,9 @@
 		621DFC421D5504BD001422BD /* LocalAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 621DFC411D5504BD001422BD /* LocalAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		621DFC491D5504BD001422BD /* LocalAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621DFC3E1D5504BD001422BD /* LocalAuth.framework */; };
 		621DFC4E1D5504BD001422BD /* LocalAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DFC4D1D5504BD001422BD /* LocalAuthTests.swift */; };
+		621DFC591D5504CC001422BD /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621DFC581D5504CC001422BD /* LocalAuthentication.framework */; };
+		621DFC5C1D5504DF001422BD /* LocalAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DFC5A1D5504DF001422BD /* LocalAuthManager.swift */; };
+		621DFC5D1D5504DF001422BD /* String+EDE_additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DFC5B1D5504DF001422BD /* String+EDE_additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		621DFC481D5504BD001422BD /* LocalAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		621DFC4D1D5504BD001422BD /* LocalAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthTests.swift; sourceTree = "<group>"; };
 		621DFC4F1D5504BD001422BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		621DFC581D5504CC001422BD /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		621DFC5A1D5504DF001422BD /* LocalAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAuthManager.swift; sourceTree = "<group>"; };
+		621DFC5B1D5504DF001422BD /* String+EDE_additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EDE_additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				621DFC591D5504CC001422BD /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +60,7 @@
 		621DFC341D5504BD001422BD = {
 			isa = PBXGroup;
 			children = (
+				621DFC581D5504CC001422BD /* LocalAuthentication.framework */,
 				621DFC401D5504BD001422BD /* LocalAuth */,
 				621DFC4C1D5504BD001422BD /* LocalAuthTests */,
 				621DFC3F1D5504BD001422BD /* Products */,
@@ -71,6 +79,8 @@
 		621DFC401D5504BD001422BD /* LocalAuth */ = {
 			isa = PBXGroup;
 			children = (
+				621DFC5F1D5504F0001422BD /* Model */,
+				621DFC5E1D5504E6001422BD /* Misc */,
 				621DFC411D5504BD001422BD /* LocalAuth.h */,
 				621DFC431D5504BD001422BD /* Info.plist */,
 			);
@@ -84,6 +94,22 @@
 				621DFC4F1D5504BD001422BD /* Info.plist */,
 			);
 			path = LocalAuthTests;
+			sourceTree = "<group>";
+		};
+		621DFC5E1D5504E6001422BD /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				621DFC5B1D5504DF001422BD /* String+EDE_additions.swift */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		621DFC5F1D5504F0001422BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				621DFC5A1D5504DF001422BD /* LocalAuthManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				621DFC5C1D5504DF001422BD /* LocalAuthManager.swift in Sources */,
+				621DFC5D1D5504DF001422BD /* String+EDE_additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +338,7 @@
 		621DFC531D5504BD001422BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +349,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ED-automation.LocalAuth";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		621DFC541D5504BD001422BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
