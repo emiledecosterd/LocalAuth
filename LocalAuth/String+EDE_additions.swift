@@ -24,7 +24,7 @@ import Foundation
 
 extension String {
   
-  // The corresponding translation has to be present in your localizable.string file
+  /// The corresponding translation has to be present in your localizable.string file
   var localized: String {
     return NSLocalizedString(self, comment: "")
   }
